@@ -1,5 +1,7 @@
 # Expert Research Skill（专家级多类型调研与决策技能）
 
+> **About / 仓库简介：** Expert Research Skill — 14 expert-level research & decision templates (EN/中文) · 14 类专家级调研与决策技能模板，跨平台可用（Claude Code / Codex CLI / Cursor / DSH / Doubao 等 13 平台）。
+
 > 双语 README · Bilingual README
 
 **[English](#english)** | **[简体中文](#中文介绍)**
