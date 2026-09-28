@@ -26,3 +26,9 @@
 
 - 浓缩版覆盖 14 类模板路由 + 五段结构 + 深度版开关 + 交付自检，功能与完整版等价，适合字符受限的场景
 - 豆包内也可把本技能放 `workspace/.user_skills/` 目录获得完整版能力
+
+## 官方文档来源（核实状态）
+
+- https://www.doubao.com/work/docs/zh-cn/articles/081010973544-skills ✅ 已核实原文
+- https://www.volcengine.com/docs/86681/2137204 ✅ 已核实原文
+- 另注：`name` 须为小写字母 / 数字 / 连字符，不能含中文；`description` 中文/英文均可；正文 >500 行官方建议拆分 → 用 [`variants/split/`](../variants/split/)。

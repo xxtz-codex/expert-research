@@ -30,3 +30,8 @@ C:\Users\<你的用户名>\.cursor\skills\expert-research\
 
 - 如果 Cursor 版本较旧不支持 skills 目录，改用 Custom Instructions：设置 → 把 [`instructions/compact-zh.txt`](../instructions/compact-zh.txt) 粘贴到 Rules / 自定义指令
 - 默认用 `SKILL.md`（中文）；英文版重命名 `SKILL.en.md` → `SKILL.md`
+
+## 官方文档来源（核实状态）
+
+- https://cursor.com/docs/skills ✅ 已核实原文
+- 另注：`name` = 文件夹名，须小写 kebab-case；Cursor 兼容识别 `.agents/`、`.claude/`、`.codex/` 下的 skills 目录；Cloud Agents 只同步 `~/.cursor/skills/`。

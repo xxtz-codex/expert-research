@@ -43,3 +43,10 @@ DSH 会话中输入调研类问题，模型应能命中 `expert-research` 技能
 
 - 默认加载 `SKILL.md`（中文版）
 - 想用英文版：重命名 `SKILL.en.md` → `SKILL.md`
+
+## 官方文档来源（核实状态）
+
+- https://github.com/deepseek-ai/deepseek-harness/blob/main/docs/subsystems/skills.md ✅ 已核实原文
+- https://www.npmjs.com/package/@deepseek-ai/dsh-skill-filesystem ✅ 已核实原文
+- https://github.com/deepseek-ai/deepseek-harness/blob/main/docs/architecture.md ✅ 已核实原文
+- 另注：无需 npm 插件打包；技能（`~/.agents/skills/` 目录包）与 Cordis 插件（bundle）是两条互不冲突的加载路径。

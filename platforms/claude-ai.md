@@ -17,3 +17,8 @@ Claude.ai（网页版）不支持技能文件夹，通过 **Project 说明（Ins
 
 - Claude.ai 同样支持 **Projects 的 Knowledge** 上传文件——可上传 `SKILL.md` 作为参考资料增强命中
 - Claude Code（本地 CLI）用户请走 [claude-code.md](claude-code.md) 的完整版安装
+
+## 官方文档来源（核实状态）
+
+- claude.ai 网页版的技能支持情况见 agentskills.io 官网 Client Showcase ⚠️ 仅摘要（未逐字读 claude.ai 官方文档）
+- 粘贴浓缩指令路径（Project instructions）人人可用，不依赖该能力是否开放。

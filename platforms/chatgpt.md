@@ -23,3 +23,8 @@ ChatGPT 不支持技能文件夹，通过 **Custom GPT 系统提示** 或 **项�
 
 - 浓缩版覆盖：14 类模板路由 + 五段结构（专家流程/隐性维度/质量红线/输出格式/迭代追问）+ 深度版开关 + 交付自检
 - 英文场景粘贴 `compact-en.txt`
+
+## 官方文档来源（核实状态）
+
+- https://help.openai.com/en/articles/20001066-skills-in-chatgpt ✅ 已核实原文
+- 另注：ChatGPT 官方 Skills 上传（Plugins→Skills）仅 Business / Enterprise / Edu 可用；免费与 Plus 账号走 Custom GPT 粘贴浓缩指令（即本文方式 A/B）。

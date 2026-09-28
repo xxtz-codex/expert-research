@@ -68,7 +68,31 @@ Delivery self-check: every conclusion carries a source link + ✅ verified / ⚠
 
 ### Platform Adaptation
 
-Install into Claude Code, Codex CLI, Cursor, DSH, Doubao, ChatGPT, Claude.ai and more — see [platforms/](platforms/README.md). English full version: [SKILL.en.md](SKILL.en.md) (rename it to SKILL.md to activate).
+This skill's frontmatter (name + description) follows the [Agent Skills open standard](https://agentskills.io/specification) ✅. The matrix below lists every platform verified so far; per-platform step-by-step guides live in [platforms/](platforms/README.md). English full version: [SKILL.en.md](SKILL.en.md) (rename it to SKILL.md to activate).
+
+| Platform | Open-standard support | Official install path | Adaptation conclusion | Source status |
+|---|---|---|---|---|
+| Claude Code | Yes (native; originator of the open standard) | `~/.claude/skills/` or project `.claude/skills/` | Install directly (folder name must be `expert-research`) | ✅ code.claude.com/docs/en/skills |
+| GitHub Copilot | Yes (native) | `.github/skills/`, `.claude/skills/`, `~/.copilot/skills/` | Install directly | ✅ docs.github.com/en/copilot/concepts/agents/about-agent-skills |
+| OpenAI Codex CLI | Yes (native) | `.codex/skills/` or `~/.codex/skills/` | Install directly (restart after install) | ✅ developers.openai.com/codex/skills |
+| ChatGPT | Partial (web upload for Business/Enterprise/Edu only) | Web: Plugins → Skills upload | Free/Plus unavailable; web upload works on paid tiers | ✅ help.openai.com/en/articles/20001066-skills-in-chatgpt |
+| Cursor | Yes (native) | `.cursor/skills/` or `~/.cursor/skills/` | Install directly (name = folder name, lowercase kebab) | ✅ cursor.com/docs/skills |
+| Windsurf | Yes (native) | `.windsurf/skills/` or `~/.codeium/windsurf/skills/` | Install directly | ✅ docs.windsurf.com/windsurf/cascade/skills |
+| Zed | Yes (native) | `~/.agents/skills/` or `<worktree>/.agents/skills/` (not `~/.config/zed/skills`) | Install directly; oversized body → use `variants/split/` | ✅ zed.dev/docs/ai/skills |
+| Kilo Code | Yes (native) | `~/.kilo/skills/` (Windows: `C:\Users\<user>\.kilo\skills\`) or `.kilo/skills/` | Install directly; recommended `variants/split/` | ✅ kilo.ai/docs/customize/skills |
+| Cline | Yes (native, Experimental toggle required) | `.cline/skills/`, `.clinerules/skills/`, `.claude/skills/`; global `~/.cline/skills/` | Must split: official requires SKILL.md < 5k tokens → use `variants/split/` | ✅ docs.cline.bot/customization/skills |
+| Continue.dev | No (no SKILL.md concept; equivalent = Rules/Prompts) | `.continue/rules/<name>.md` | Needs conversion (SKILL.md → rule/prompt) | ✅ docs.continue.dev/customize/rules |
+| Gemini CLI | Yes (native) | `~/.gemini/skills/` or `~/.agents/skills/`; project `.gemini/skills/` | Install directly (`gemini skills install <git-url> --consent`) | ✅ geminicli.com/docs/cli/skills |
+| Doubao 豆包 | Yes (native; officially cites the open spec) | UI upload; local agent_mode: `workspace/.user_skills/<name>/` | Install directly (>500 lines → `variants/split/` progressive disclosure) | ✅ doubao.com/work/docs + volcengine.com/docs/86681/2137204 |
+| DSH (DeepSeek Harness) | Yes (native skills subsystem) | `~/.agents/skills/<name>/` or `~/.dsh/skills/<name>/` | Install directly, no Cordis plugin needed (plugin bundle is a separate executable-capability channel) | ✅ github.com/deepseek-ai/deepseek-harness/docs/subsystems/skills.md + npm @deepseek-ai/dsh-skill-filesystem |
+
+Notes:
+
+1. This skill's frontmatter (`name` + `description`) conforms to the [agentskills.io open standard](https://agentskills.io/specification) ✅.
+2. The full `SKILL.md` is 48.9KB, exceeding the spec's recommended 500 lines / 5k tokens. Cline officially mandates `SKILL.md` < 5k tokens; Zed / Kilo / Doubao officially recommend splitting. For these length-limited platforms this repo ships a lightweight router split variant at [`variants/split/`](variants/split/) — use that directory directly as the skill folder.
+3. Paste-type platforms (ChatGPT free / Custom GPT, Claude.ai, Kimi / Tongyi / Zhipu / Xunfei, etc.) use the compact instruction version in [`instructions/`](instructions/).
+4. Switch to English: rename `SKILL.en.md` to `SKILL.md` to activate.
+5. ChatGPT official Skills upload is Business / Enterprise / Edu only; free and Plus plans must paste the compact instruction version into a Custom GPT.
 
 ## ✨ Features
 
@@ -160,7 +184,31 @@ mkdir -p .claude/skills && git clone https://github.com/xxtz-codex/expert-resear
 
 ### 平台适配
 
-支持 Claude Code / Codex CLI / Cursor / DeepSeek Harness (DSH) / 豆包 / ChatGPT / Claude.ai 等主流平台，逐平台安装指南见 [platforms/](platforms/README.md)；粘贴型平台用 [instructions/](instructions/) 浓缩指令版。英文完整版：SKILL.en.md（重命名为 SKILL.md 即启用）。
+本技能 frontmatter（name + description）符合 [Agent Skills 开放标准](https://agentskills.io/specification) ✅。下表为已核实的全平台适配矩阵，逐平台分步安装指南见 [platforms/](platforms/README.md)。英文完整版：[SKILL.en.md](SKILL.en.md)（重命名为 SKILL.md 即启用）。
+
+| 平台 | 是否支持开放标准 | 官方安装路径 | 适配结论 | 来源状态 |
+|---|---|---|---|---|
+| Claude Code | 是（原生，开放标准发起者） | `~/.claude/skills/` 或项目 `.claude/skills/` | 直接装（目录名须 `expert-research`） | ✅ code.claude.com/docs/en/skills |
+| GitHub Copilot | 是（原生） | `.github/skills/`、`.claude/skills/`、`~/.copilot/skills/` | 直接装 | ✅ docs.github.com/en/copilot/concepts/agents/about-agent-skills |
+| OpenAI Codex CLI | 是（原生） | `.codex/skills/` 或 `~/.codex/skills/` | 直接装（装完重启） | ✅ developers.openai.com/codex/skills |
+| ChatGPT | 部分（仅 Business/Enterprise/Edu 网页上传） | 网页 Plugins→Skills 上传 | 免费/Plus 不可用；网页上传可装 | ✅ help.openai.com/en/articles/20001066-skills-in-chatgpt |
+| Cursor | 是（原生） | `.cursor/skills/` 或 `~/.cursor/skills/` | 直接装（name=文件夹名，小写 kebab） | ✅ cursor.com/docs/skills |
+| Windsurf | 是（原生） | `.windsurf/skills/` 或 `~/.codeium/windsurf/skills/` | 直接装 | ✅ docs.windsurf.com/windsurf/cascade/skills |
+| Zed | 是（原生） | `~/.agents/skills/` 或 `<worktree>/.agents/skills/`（注意：不是 `~/.config/zed/skills`） | 直接装；正文超长建议用 `variants/split/` | ✅ zed.dev/docs/ai/skills |
+| Kilo Code | 是（原生） | `~/.kilo/skills/`（Windows：`C:\Users\<user>\.kilo\skills\`）或 `.kilo/skills/` | 直接装；建议用 `variants/split/` | ✅ kilo.ai/docs/customize/skills |
+| Cline | 是（原生，需开 Experimental 开关） | `.cline/skills/`、`.clinerules/skills/`、`.claude/skills/`；全局 `~/.cline/skills/` | 必须拆分：官方要求 SKILL.md<5k tokens → 用 `variants/split/` | ✅ docs.cline.bot/customization/skills |
+| Continue.dev | 否（无 SKILL.md 概念，等价物 Rules/Prompts） | `.continue/rules/<name>.md` | 需转换（SKILL.md→rule/prompt） | ✅ docs.continue.dev/customize/rules |
+| Gemini CLI | 是（原生） | `~/.gemini/skills/` 或 `~/.agents/skills/`；项目 `.gemini/skills/` | 直接装（`gemini skills install <git-url> --consent`） | ✅ geminicli.com/docs/cli/skills |
+| 豆包 Doubao | 是（原生，官方指明源自开放规范） | UI 上传；本地 agent_mode：`workspace/.user_skills/<name>/` | 直接装（正文>500 行建议 `variants/split/` 渐进披露） | ✅ doubao.com/work/docs + volcengine.com/docs/86681/2137204 |
+| DSH (DeepSeek Harness) | 是（原生 skills 子系统） | `~/.agents/skills/<name>/` 或 `~/.dsh/skills/<name>/` | 直接装，无需 Cordis 插件（插件 bundle 是另一套可执行能力通道） | ✅ github.com/deepseek-ai/deepseek-harness/docs/subsystems/skills.md + npm @deepseek-ai/dsh-skill-filesystem |
+
+说明：
+
+1. 本技能 frontmatter（`name` + `description`）符合 [agentskills.io 开放规范](https://agentskills.io/specification) ✅。
+2. 完整版 `SKILL.md` 为 48.9KB，超出规范建议的 500 行 / 5k tokens。Cline 官方强制要求 `SKILL.md`<5k tokens；Zed / Kilo / 豆包官方建议拆分。为此仓库提供精简路由拆分变体 [`variants/split/`](variants/split/)（直接用该目录作为技能文件夹即可）。
+3. 粘贴型平台（ChatGPT 免费版 / Custom GPT、Claude.ai、Kimi / 通义 / 智谱 / 讯飞等）用 [`instructions/`](instructions/) 浓缩指令版。
+4. 英文版切换：把 `SKILL.en.md` 重命名为 `SKILL.md` 即启用。
+5. ChatGPT 官方 Skills 上传仅 Business / Enterprise / Edu 可用，免费与 Plus 须走 Custom GPT 粘贴浓缩指令。
 
 ## ✨ 特性
 

@@ -33,3 +33,8 @@ macOS:    ~/.claude/skills/expert-research/
 ## 深度版
 
 任意模板末尾追加：`深度：深度版（追加通用盲点清单）` 即可启用 12 类盲点核查。
+
+## 官方文档来源（核实状态）
+
+- https://code.claude.com/docs/en/skills ✅ 已核实原文
+- 另注：从 GitHub 下载 ZIP 解压后目录名是 `expert-research-main`，须改名为 `expert-research`；保留名 `synced/anthropic-skills` 不可用。

@@ -26,3 +26,8 @@ C:\Users\<你的用户名>\.codex\skills\expert-research\
 
 - 技能名 kebab-case：`expert-research` ✓
 - 默认用 `SKILL.md`（中文）；英文版把 `SKILL.en.md` 重命名为 `SKILL.md`
+
+## 官方文档来源（核实状态）
+
+- https://developers.openai.com/codex/skills ✅ 已核实原文
+- 另注：装完必须**重启 Codex** 才能识别新技能；可在交互界面输入 `/skills` 列表、或按 `$` 菜单查看已加载技能验证。
