@@ -66,6 +66,10 @@ Deep version: when the user says "deep", add the general blind-spot checklist: c
 Delivery self-check: every conclusion carries a source link + ✅ verified / ⚠️ to verify / ❌ not found; facts separated from inference; nothing fabricated; local-environment fit marked as installable/viewable/needs-config.
 ```
 
+### Platform Adaptation
+
+Install into Claude Code, Codex CLI, Cursor, DSH, Doubao, ChatGPT, Claude.ai and more — see [platforms/](platforms/README.md). English full version: [SKILL.en.md](SKILL.en.md) (rename it to SKILL.md to activate).
+
 ## ✨ Features
 
 - **Traceable sources**: every conclusion carries a source link + ✅ verified / ⚠️ to verify / ❌ not found
@@ -153,6 +157,10 @@ mkdir -p .claude/skills && git clone https://github.com/xxtz-codex/expert-resear
 深度版：用户说"深度"时追加通用盲点清单核查：成本/合规/隐私/供应链/安全/决策偏差/长期演进/时间/反例/二手证据/机会成本/可验证性。
 交付自检：每条结论带来源链接 + ✅已核实/⚠️待验证/❌未查到；事实与推断分离；无编造；适配本地环境的标注可装/可看/需配置。
 ```
+
+### 平台适配
+
+支持 Claude Code / Codex CLI / Cursor / DeepSeek Harness (DSH) / 豆包 / ChatGPT / Claude.ai 等主流平台，逐平台安装指南见 [platforms/](platforms/README.md)；粘贴型平台用 [instructions/](instructions/) 浓缩指令版。英文完整版：SKILL.en.md（重命名为 SKILL.md 即启用）。
 
 ## ✨ 特性
 
