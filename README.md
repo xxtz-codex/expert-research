@@ -1,5 +1,7 @@
 # Expert Research Skill（专家级多类型调研与决策技能）
 
+**🌐 Languages:** [简体中文](README.md) | [English](README.en.md)
+
 > 一个内置 **14 类专家模板** 的 AI 技能，用于深度调研、规划、分析与决策支持。符合 [Agent Skills 开放标准](https://agentskills.io)（2025-12 发布），可跨平台使用：Claude Code、豆包、DSH、Codex CLI、Cursor 等。
 
 ## 🎯 它能做什么
